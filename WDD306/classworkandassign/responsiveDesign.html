@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Design</title>
+    <style>
+        header {
+            background-color: pink;
+            height:200px;
+        }
+        
+        #logo {
+            background-color: gray;
+            height: 100px;
+            width: 100px;
+            float:left;
+            position: absolute;
+            left:2em;
+            top:3em;
+        }
+        
+        nav {
+            background-color: lightyellow;
+            float: right;
+            height:50%;
+            width:75%;
+            position: relative;
+            top:3em;
+            right:2em;
+        }
+        
+        main {
+            background-color: lightgray;
+            /* font-size:2rem; */
+        }
+        
+        article {
+            background-color: lightgreen;
+            float:left;
+            width:60%;
+            height: 400px;
+            font-size: 2em;
+            /*16ft*2 = 32pt;=*/
+        }
+        
+        section {
+            background-color: white;
+            float:left;
+            height:175px;
+            width: 46%;
+            margin:2%;
+            font-size: 1.25em;
+            /*16pt*1.25 = 20pt*/
+        }
+
+        section:nth-child(3) {
+            width:96%;
+        }
+        
+        aside {
+            background-color: lavender;
+            height: 400px;
+        }
+        
+        footer {
+            background-color: lightblue;
+            /* position: fixed;
+            bottom: 0em;
+            width:100%; */
+            clear:both;
+            height:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>header
+        <div id="logo">logo</div>
+        <nav>navigation
+        </nav>
+    </header>
+    <main class="clearfix">
+        <article>
+            <section>section</section>
+            <section>section</section>
+            <section>section</section>
+        </article>
+        <aside>aside</aside>
+    </main>
+    <footer>footer</footer>
+</body>
+
+</html>

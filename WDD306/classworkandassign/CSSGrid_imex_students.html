@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid: Implicit/Explicit Grid</title>
+    <style>
+        body {
+            margin: 40px;
+        }
+        
+        aside {
+            margin-top: 10em;
+            height: 20em;
+            display: grid;
+            grid-template-rows: 3 repeat(1fr);
+            grid-template-columns: 3 repeat(1fr);
+            grid-gap: 10px;
+        }
+        
+        section {
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 150%;
+        }
+        
+        article {
+            background-color: #fff;
+            color: #444;
+            display: grid;
+            margin: 1em;
+            height: 20em;
+            grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+            grid-gap: 10px;
+            grid-template-areas:
+            "a a b"
+            "c d d"
+            ". e .";
+        }
+        
+        .s1 {
+            grid-column: span 2;
+        }
+        .s2{
+            grid-column-start: 3;
+        }
+        .s3{
+            grid-row: 2;
+            grid-column: span 1;
+        }
+        .s4{
+            grid-row: 2;
+            grid-column: 2/span 2;
+        }
+        .s5{
+            grid-row: 3;
+            grid-column: span 3;
+        }
+
+        /* .a{
+            grid-column: span 2;
+        }
+        .b{
+            grid-column-start: 3;
+        }
+        .c{
+            grid-row: 2;
+            grid-column: span 1;
+        }
+        .d{
+            grid-row: 2;
+            grid-column: 2/span 2;
+        }
+        .e{
+            grid-row: 3;
+            grid-column: 2/span 1;
+        } */
+        .a{
+            grid-area: a;
+        }
+        .b{
+            grid-area: b;
+        }
+        .c{
+            grid-area: c;
+        }
+        .d{
+            grid-area: d;
+        }
+        .e{
+            grid-area: e;
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <section class="s1">S1</section>
+        <section class="s2">S2</section>
+        <section class="s3">S3</section>
+        <section class="s4">S4</section>
+        <section class="s5">S5</section>
+    </aside>
+    <article>
+        <section class="a">A</section>
+        <section class="b">B</section>
+        <section class="c">C</section>
+        <section class="d">D</section>
+        <section class="e">E</section>
+    </article>
+
+
+</body>
+
+</html>

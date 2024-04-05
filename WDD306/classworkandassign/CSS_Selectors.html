@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>CSS Selectors</title>
+    <style>
+        *{
+            font-size: 10pt;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        p{
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        article p /*any child/grandchild/greatgrandchild etc*/{
+            background-color: rgb(185, 45, 45);
+        }
+
+        article>p /*direct child of article*/{ 
+            background-color: rgb(228, 210, 55);
+        }
+
+        p+p{
+            background-color: rgb(228, 147, 54);
+        }
+
+        table~p /*paragraph preceded by table*/{
+            font-weight: bolder;
+            border-bottom: 4px solid seagreen;
+        }
+
+        [href]{
+            text-decoration: none;
+        }
+
+        [target=_blank]{
+            background-color: sienna;
+        }
+
+        [href$="pdf"]{
+            font-weight: bold;
+        }
+
+        [href^="CSS"]{
+            color: rgb(59, 9, 59);
+        }
+
+        p a:link {
+            background-color: burlywood;
+        }
+        p a:hover {
+            background-color: cadetblue;
+        }
+        p a:visited{
+            background-color: black;
+        }
+
+        tr:nth-child(even){
+            background-color: rgba(165, 42, 42, 0.541);
+        }
+        tr:nth-child(odd){
+            background-color: rgba(210, 105, 30, 0.568);
+        }
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, tr{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        tr:first-child{
+            background-color: rgba(106, 142, 35, 0.5);
+            color: white;
+        }
+        tr:not(first-child){
+            padding: 10px;
+            color: rgb(209, 137, 4);
+        }
+
+        h2+p::first-line{
+            font-weight: bold;
+        }
+        h2+p::first-letter{
+            color: red;
+            font-size: 300%;
+        }
+
+
+        li:hover::after {
+            content: " is awesome";
+        }
+        li:hover::before {
+            content: "I think ";
+        }
+        
+        *::selection {
+            background-color: palegoldenrod;
+        }
+
+
+        /* [name~="pets"]{
+            background-color: antiquewhite;
+        } */
+    </style>
+</head>
+
+<body>
+    <article>
+        <section>
+            <h2>WDD306 Selectors</h2>
+            <p>This page is going to test your skills at using CSS pseudo-selectors. <i>Good Luck!</i></p>
+            <p>There are all kinds of selectors you can use. The following documents will help:</p>
+            <ul>
+                <li><a href="CSS.pdf" target="_blank">CSS Selectors List</a></li>
+                <li><span><a href="CSS_Stuff.doc" target="_blank">Advanced CSS</a></span></li>
+                <li><a href="myBrowserHelp.pdf" target="_blank">Browser Support</a></li>
+                <li><a href="lovelyCSSstuff.doc" target="_self">Other CSS Stuff</a></li>
+            </ul>
+            <p>Here are some of the topics we will cover today:</p>
+            <ul>
+                <li>CSS ID and Class names</li>
+                <li>Word wrap</li>
+                <li>Defining Columns</li>
+                <li>Using link states</li>
+                <li>Child placement</li>
+                <li>Zebra striping</li>
+                <li>Pseudo elements such as <i>before</i> and <i>after</i></li>
+                <li>Color Values</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Color Values</h2>
+            <p>Here is a color value table to help you understand all the possibilities:</p>
+            <table>
+                <tr>
+                    <th>SELECTOR</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+                <tr>
+                    <td>red</td>
+                    <td>Default color values</td>
+                </tr>
+                <tr>
+                    <td>rgb(255,0,0);</td>
+                    <td>RGB values for red</td>
+                </tr>
+                <tr>
+                    <td>#FF0000;</td>
+                    <td>Hexidecimal value for red</td>
+                </tr>
+                <tr>
+                    <td>hls(0.0.5,1.0);
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>rgba(255,0,0,0.5);</td>
+                    <td>HLS values for red</td>
+                </tr>
+                <tr>
+                    <td>hlsa(0,0.5,1.0,0.5);</td>
+                    <td>RGB value for red with a 50% transparency</td>
+                </tr>
+                <tr>
+                    <td>red</td>
+                    <td>HLS value for red with a 50% transparency
+                    </td>
+                </tr>
+            </table>
+            <p>Any questions??</p>
+            <p>Ididn'tthinksobutIwantedtoaskbecauseIwouldhateforyourquestionstogounanswered.</p>
+        </section>
+        <p>Ididn'tthinksobutIwantedtoaskbecauseIwouldhateforyourquestionstogounanswered.</p>
+    </article>
+    <hr/>
+    <p>Visit your <a href="http://canvas.butler.edu">Canvas Page</a> for more information.</p>
+    <hr/>
+    <form>
+        <label>Name:</label>
+        <input type="text" name="fullName" />
+        <p>Pick the pets you like:</p>
+        <input type="checkbox" name="pets" value="dogs" id="dogs" />
+        <label for="dogs">Dogs</label><br/>
+        <input type="checkbox" name="pets" value="cats" id="cats" />
+        <label for="cats">Cats</label><br/>
+        <input type="checkbox" name="pets" value="birds" id="birds" />
+        <label for="birds">Birds</label><br/>
+        <input type="checkbox" name="pets" value="reptiles" id="reptiles" />
+        <label for="reptiles">Reptiles</label><br/>
+        <input type="submit" value="Submit Form" disabled="disabled" </>
+    </form>
+
+
+
+
+
+
+
+</body>
+
+</html>

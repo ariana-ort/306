@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid: Holy Grail</title>
+    <style>
+        body {
+        display: grid;
+        height: 100vh;
+        }
+
+        header {
+            background-color: pink;
+            grid-area: header;
+        }
+        
+        nav {
+            background-color: lightGreen;
+            grid-area: navigation;
+
+        }
+        
+        article {
+            background-color: lightYellow;
+            grid-area: article;
+        }
+        
+        aside {
+            background-color: peachPuff;
+            grid-area: aside;
+        }
+        
+        footer {
+            background-color: lightBlue;
+            grid-area: footer;
+        }
+        
+        #logo {
+            background-color: gray;
+            height: 100px;
+            width: 100px;
+            margin: 0px auto;
+        }
+
+        li {
+            background-color: lemonchiffon;
+            list-style-type: none;
+            padding: 0.25em;
+        }
+
+        .flex-container {
+            display:flex;
+            background-color:rgb(125, 178, 199);
+            height: 75%; 
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+
+        @media screen and (max-width:599px) {
+            body{
+                grid-template: 100px 50px 3fr 1fr 50px/1fr;
+                grid-template-areas: "header" "navigation" "article" "aside" "footer";
+            }
+        }
+
+        @media screen and (max-width:899px) and (min-width:600px) {
+            body{
+                grid-template: 2fr 1fr 3fr 1fr/2fr 1fr;
+                grid-template-areas: "header header" "navigation navigation" "article aside" "footer footer";
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            body{
+                grid-template: 1fr 3fr 1fr/1fr 4fr 1fr;
+                grid-template-areas: "header header header" "navigation article aside" "footer footer footer"; /*laying out rows w grid-area names*/
+            }
+
+            .flex-container{
+                position: relative;
+                top:-1em;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                align-content: unset;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo"></div>
+    </header>
+    <nav>
+        <ul class="flex-container">
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+            <li class="flex-item">6</li>
+        </ul>
+    </nav>
+    <article></article>
+    <aside></aside>
+    <footer></footer>
+</body>
+
+</html>

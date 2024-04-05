@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: pink;
+            grid-column-start:1; /*start all the way to the left*/
+            grid-column-end:3; /*ends all the way to the right*/
+            /*now pushes articles down bc it takes up all the space*/
+        }
+
+        article {
+            background-color: lightblue;
+            display: grid;
+            grid-template: 1fr 1fr/1fr 1fr;
+            grid-gap: 20px; /*row and column*/
+        }
+
+        aside{
+            background-color: lavender;
+        }
+
+        footer {
+            background-color:lightgoldenrodyellow;
+            grid-column:1/-1; /*very left to very right (think number line) shortcut to span entire page*/
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+            /* grid-template-rows: 1fr 3fr 1fr;
+            grid-template-columns: 2fr 1fr; */
+            grid-template:1fr 3fr 1fr/2fr 1fr;
+        }
+
+        section {
+            background-color: white;
+        }
+
+        section:nth-child(3){ /*targets 3rd section*/
+            grid-column: 1/3; /*spans whole article*/
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <article>
+        <section></section>
+        <section></section>
+        <section></section>
+    </article>
+    <aside></aside>
+    <footer></footer>
+
+</body>
+</html>

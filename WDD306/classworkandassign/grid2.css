@@ -1,0 +1,170 @@
+@media screen and (min-width: 769px) { /*desktop*/
+    *{
+        padding: 0px;
+        border:0px;
+    }
+
+    body {
+        display: grid;
+        height:100vh;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    header {
+        background-color: pink;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+
+    #logo {
+        background-color: darkslategray;
+        margin: 1rem;
+    }
+
+    nav{
+        background-color: lightgoldenrodyellow;
+        margin: 1rem;
+    }
+
+    article{
+        background-color: lightblue;
+        display: grid;
+        grid-template: 1fr 1fr/1fr 1fr;
+        grid-gap: 0.7rem;
+        padding: 0.7rem;
+    }
+
+    aside {
+        background-color: maroon;
+    }
+
+    section {
+        background-color: snow;
+    }
+
+    section:nth-child(3){
+        grid-column: 1/-1;
+    }
+
+    footer{
+        background-color: olivedrab;
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) { /*tablet*/
+    *{
+        padding: 0px;
+        border:0px;
+    }
+
+    body {
+        display: grid;
+        height:100vh;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    header {
+        background-color: pink;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+
+    #logo {
+        background-color: darkslategray;
+        margin: 1rem;
+    }
+
+    nav{
+        background-color: lightgoldenrodyellow;
+        margin: 1rem;
+    }
+
+    article{
+        background-color: lightblue;
+        display: grid;
+        grid-template-rows: repeat(3, 30%);
+        grid-gap: 0.7rem;
+        padding: 0.7rem;
+    }
+
+    aside {
+        background-color: maroon;
+    }
+
+    section {
+        background-color: snow;
+    }
+
+    section:nth-child(3){
+        grid-column: 1/-1;
+    }
+
+    footer{
+        background-color: olivedrab;
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (max-width:320px) { /*phone*/
+    *{
+        padding: 0px;
+        border:0px;
+    }
+
+    body {
+        display: grid;
+        height:100vh;
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        /* grid-template-columns: 2fr 1fr; */
+    }
+
+    header {
+        background-color: pink;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #logo {
+        background-color: darkslategray;
+        margin: 1rem;
+        grid-area: span 2/span 1;
+    }
+
+    nav{
+        background-color: lightgoldenrodyellow;
+        margin: 1rem;
+        grid-column-start: 6;
+    }
+
+    article{
+        background-color: lightblue;
+        display: grid;
+        grid-template-rows: repeat(3, 30%);
+        grid-gap: 0.7rem;
+        padding: 0.7rem;
+    }
+
+    aside {
+        background-color: maroon;
+    }
+
+    section {
+        background-color: snow;
+    }
+
+    section:nth-child(3){
+        grid-column: 1/-1;
+    }
+
+    footer{
+        background-color: olivedrab;
+        grid-column: 1/-1;
+    }
+}

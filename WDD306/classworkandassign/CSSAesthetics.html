@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				background-color:gray;
+				font-size:40px; 
+				font-family:"Eras Bold ITC", sans-serif;
+				box-shadow: inset 0 0 40px purple;/*shading inset means inside*/
+			}
+			
+			div {
+				height:100px; 
+				width:200px; 
+				margin:20px; 
+				background-color:rgb(150,150,150); 
+				float:left;
+			}
+			
+			/*text shadows*/
+			p:first-child{
+				text-shadow:2px 2px 4px orange;
+				/*text-shadow: -2px -2px 0px orange; */
+			}
+			p:nth-child(2){
+				text-shadow: 1px 1px 0px white;
+			}
+			p:nth-child(3){
+				text-shadow: 1px 1px 0px yellow, 4px 4px 8px purple;
+			}
+
+			/*box shadows*/
+
+
+			#one {
+				background: linear-gradient(red 0%, orange 50%, yellow 100%);
+			}
+			#two {
+				background: linear-gradient(45deg, crimson -15%, orange 20%, goldenrod 55%, brown 70%, olive 90%);
+			}
+			#three {
+				background: radial-gradient( circle closest-side, olivedrab 0%, rgb(45, 73, 126) 100%);
+			}
+			#four {
+				background: radial-gradient(ellipse farthest-side, violet 0%, indigo 20%, navy 80%, lavender 100%);
+			}
+			#five {
+				background: repeating-linear-gradient(45deg, crimson 0%, maroon 10%, brown 20%, darkorange 30%);
+			}
+			#six {
+				background: repeating-radial-gradient(ellipse farthest-corner, pink 0%, rgb(218, 92, 113) 10%, rgb(224, 53, 82) 20%, rgb(235, 33, 67) 30%);
+			}
+			#seven {
+				background: repeating-radial-gradient(circle closest-side, lavender 0%, lavender 9%, teal 10%, teal 19%, crimson 20%, crimson 29%);
+			}
+		
+		</style>
+	</head>
+	<body>
+		<p>Testing Text Shadow</p>
+		<p>Testing emboss</p>
+		<p>Testing emboss with drop shadow</p>
+		<p>Testing multiple shadows</p>
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+		<div id="four"></div>
+		<div id="five"></div>
+		<div id="six"></div>
+		<div id="seven"></div>
+		<div id="eight"></div>
+		<div id="nine"></div>
+		<div id="ten"></div>
+		<div id="eleven"></div>
+		<div id="twelve"></div>
+
+		
+	</body>
+</html>

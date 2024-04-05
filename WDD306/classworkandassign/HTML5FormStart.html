@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>HTML 5 Forms</title>
+    <style>
+        form {
+            background-color: rgb(220, 220, 220);
+            border: 1px solid black;
+            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        
+        label {
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+            margin-right: 5px;
+            vertical-align: sub;
+        }
+        
+        input {
+            margin-bottom: 10px;
+        }
+        
+        input+label {
+            text-align: left;
+            width: 250px;
+            vertical-align: text-top;
+        }
+    </style>
+
+</head>
+<form action="processForm.php" method="GET" role="form">
+    <label>Today's Date:</label> <input type="text" placeholder="mm/dd/yyyy" /><br/>
+    <label>Today's Time:</label> <input type=" text " /><br/>
+    <label for="FName ">Full Name:</label>
+    <input type="text " id="FName " name="FName " required="required " /><br/>
+    <label for="email ">Email Address:</label>
+    <input type="email " name="email " id="email " required="required " placeholder="joesmith@gmail.com " /><br/>
+    <label for=" email2 ">Re-enter your Email Address:</label>
+    <input type="email " name="email2 " id="email2 " required="required " placeholder="joesmith@gmail.com " autocomplete/><br/>
+
+    <br/>
+
+    <label for="class ">Class:</label>
+    <select name="class ">
+            <option value="freshman ">Freshman</option>
+            <option value="sophomore ">Sophomore</option>
+            <option value="junior ">Junior</option>
+            <option value="senior ">Senior</option>
+        </select>
+
+    </br>
+
+    <p>Select your Major</p>
+    <input name="majors " list="majors ">
+    <datalist id="majors " autocomplete="off ">
+        <option value="Web Design & Development "></option>
+        <option value="Creative Media & Entertainment "></option>
+        <option value="Music Industry Studies "></option>
+        <option value="Sports Media "></option>
+        <option value="Journalism "></option>
+        <option value="Communication Sciences & Disorders "></option>
+        <option value="Critical Communication & Media Studies "></option>
+        <option value="Organizational Communication & Leadership "></option>
+        <option value="Strategic Communication "></option>
+    </datalist>
+
+
+
+
+    <p>When do you expect to graduate?</p>
+    <input type="number " name="gradYear " />
+    <p>Why did you take this class? (Select more than one if applicable)</p>
+    <input type=" checkbox " id="requirement " name="reason " value="requirement " />
+    <label for="requirement ">It was required for my major/minor</label><br/>
+    <input type="checkbox " id="enjoy " name="reason " value="enjoy " />
+    <label for="enjoy ">I enjoy the subject matter</label><br/>
+    <input type="checkbox " id="grapevine " name="reason " value="grapevine " />
+    <label for="grapevine ">I heard it was a fun class</label><br/>
+    <input type="checkbox " id="friends " name="reason " value="friends " />
+    <label for="friends ">My friends were taking it</label><br/>
+
+    <p>Which one is more difficult for you?</p>
+    <input type="radio " id="HTML " name="difficulty " value="HTML " />
+    <label for="HTML ">HTML</label><br/>
+    <input type="radio " id="CSS " name="difficulty " value="CSS " />
+    <label for="CSS ">CSS</label><br/>
+
+    <br/>
+    <input type="submit " name="submit " id="submit " value="Submit Form " />
+
+</form>
+
+</html>
+
+</html>

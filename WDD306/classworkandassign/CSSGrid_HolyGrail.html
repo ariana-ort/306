@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid: Holy Grail</title>
+    <style>
+        body {
+            display: grid;
+            height:100vh;
+            grid-template: 1fr 3fr 1fr/ 1fr 3fr 1fr;
+        }
+
+        header {
+            background-color: pink;
+            display: grid;
+            grid-column: 1/-1;
+            align-items: start;
+        }
+        
+        nav {
+            background-color: lightGreen;
+        }
+        
+        article {
+            background-color: lightYellow;
+        }
+        
+        aside {
+            background-color: peachPuff;
+        }
+        
+        footer {
+            background-color: lightBlue;
+            grid-column: 1/-1;
+        }
+        
+        #logo {
+            background-color: gray;
+            height: 100px;
+            width: 100px;
+            margin: 0px auto;
+        }
+
+        @media screen and (min-width:900px) {
+            body {
+                display: grid;
+                height:100vh;
+                grid-template: 1fr 3fr 1fr/ 1fr 3fr 1fr;
+            }
+
+            header {
+                display: grid;
+                grid-column: 1/-1;
+                align-items: start;
+            }
+
+            footer {
+                grid-column: 1/-1;
+            }
+        }
+
+        @media screen and (max-width:899px) and (min-width:600px) {
+            body {
+                display: grid;
+                height:100vh;
+                grid-template: 2fr 1fr 4fr 1fr/ 2fr 1fr;
+            }
+
+            header {
+                display: grid;
+                align-items: start;
+                grid-column: 1/-1;
+            }
+
+            nav, footer {
+                /* grid-column: 1/-1; */
+                grid-column: 1/span2; /*start at row 1 and span 2 columns*/
+            }
+        }
+
+        @media screen and (max-width:599px) {
+            body {
+                display: grid;
+                height:100vh;
+                /* grid-template-rows: 2fr 1fr 6fr 3fr 1fr; */
+                grid-template: 100px 50px 3fr 1fr 50px/1fr;
+            }
+
+            /* header {
+                display:  grid;
+                align-items: start;
+                grid-column: 1/-1;
+            }
+
+            nav, article, aside, footer {
+                grid-column: 1/-1;
+            } */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo"></div>
+    </header>
+    <nav></nav>
+    <article></article>
+    <aside></aside>
+    <footer></footer>
+</body>
+
+</html>

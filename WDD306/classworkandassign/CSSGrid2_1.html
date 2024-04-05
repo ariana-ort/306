@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display:grid;
+            grid-template: 25% 75%/ 25% 75%;
+            grid-gap: 1em;
+        }
+
+        header{
+            grid-column: 1/-1;
+        }
+
+        header, nav {
+            background-color: pink;
+        }
+        article{
+            padding:1em;
+            background-color: skyblue;
+            display: grid;
+            grid-template: 1fr 1fr/ repeat(4, 1fr);
+            grid-gap: 1em;
+        }
+
+        section {
+            background-color: moccasin;
+        }
+        #s1 {
+            grid-column: 1/span 2;
+        }
+        #s2 {
+            grid-column: 3/span 2; /*3/-1*/
+        }
+        #s4 {
+            grid-column: 2/span 2;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <article>
+        <section id="s1"></section>
+        <section id="s2"></section>
+        <section id="s3"></section>
+        <section id="s4"></section>
+        <section id="s5"></section>
+    </article>
+</body>
+</html>

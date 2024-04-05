@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid Layout Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        article {
+            background-color: rgb(200, 200, 200);
+            display: grid;
+            height: 100vh;
+            grid-template: 25vh repeat(4, 1fr)/repeat(4,1fr);
+            grid-gap: 10px;
+        }
+        
+        section {
+            background-color: steelblue;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            padding: 2em;
+        }
+
+        section:nth-child(1){
+            grid-column: 1/span 4;
+        }
+        section:nth-child(2){
+            grid-row: 2/span 4;
+        }
+        section:nth-child(4){
+            grid-row: 2/span 2;
+            grid-column-start: 3;
+        }
+        section:nth-child(5){
+            grid-row: 2/span 3;
+            grid-column-start: 4;
+        }
+        section:nth-child(6){
+            grid-row: 3/span 3;
+            grid-column-start: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <section>1 25vh tall</section>
+        <section>2</section>
+        <section>3</section>
+        <section>4</section>
+        <section>5</section>
+        <section>6</section>
+        <section>7</section>
+        <section>8</section>
+        <section>9</section>
+    </article>
+</body>
+
+</html>
